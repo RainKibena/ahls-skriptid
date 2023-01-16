@@ -1,9 +1,11 @@
 #!/bin/bash
 
 #Mysql andmebaasi, kasutaja ja kasutajaõiguste seadistamine root kasutajana:
-
+#Loob andmebaasi
 mysql --user="root" --password="qwerty" --execute="create database wpdatabase;
+#Loob kasutaja andmebaasi
 create user wpuser@localhost identified by 'Passw0rd!';
+#Annab andmebaasi kasutajale administraatori õigused
 grant all privileges on wpdatabase.* to wpuser@localhost;
 flush privileges;
 exit"
